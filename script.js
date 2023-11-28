@@ -34,8 +34,6 @@ function itemsWithCategory(data, category) {
 		.map((item) => item.foodname);
 }
 
-
-
 function itemsGreaterThanGivenCalories(data, calories) {
 	return data.filter((item) => item.calorie > calories);
 }
@@ -74,7 +72,7 @@ function itemsLowestToHighestCab(data) {
 	// }
 	// return data;
 	// approach 2 : sort method
-    return data.sort((item1,item2) => item1.cab - item2.cab);
+	return data.sort((item1, item2) => item1.cab - item2.cab);
 }
 
 result = listAllItems(jsonData);
@@ -95,6 +93,10 @@ console.log('================================================================');
 
 result = itemsWithCategory(jsonData, 'Nuts');
 console.log('items with category nuts:', result);
+console.log('================================================================');
+
+result = itemsWithCategory(jsonData, 'Grain');
+console.log('items with category Grain:', result);
 console.log('================================================================');
 
 result = itemsWithCategory(jsonData, 'Dairy');
